@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kontaktirajte Vulkanizer Točak u Zrenjaninu: adresa, telefon, radno vreme i forma za zakazivanje termina.">
+<meta name="keywords" content="vulkanizer, vulkanizerska radnja, Zrenjanin, gume, zamena guma, balansiranje, krpljenje guma, prodaja guma">
+<meta name="author" content="Vulkanizer Točak">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Kontakt - Vulkanizer Točak Zrenjanin">
+<meta property="og:description" content="Kontaktirajte Vulkanizer Točak u Zrenjaninu: adresa, telefon, radno vreme i forma za zakazivanje termina.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:image" content="slike/slajder1.jpg">
+<title>Kontakt - Vulkanizer Točak Zrenjanin</title>
+<link rel="stylesheet" href="css/stil.css">
+<link rel="icon" type="image/svg+xml" href="slike/logo.svg">
+</head>
+<body>
+<header class="zaglavlje">
+<nav class="nav" aria-label="Glavna navigacija">
+<a href="pocetna.html" class="logo"><img src="slike/logo.svg" alt="Logo vulkanizera Točak" width="42" height="42"><span data-prevod="naziv">Vulkanizer Točak</span></a>
+<button class="hamburger" id="hamburger" aria-label="Otvori meni" aria-expanded="false" aria-controls="meni"><span></span><span></span><span></span></button>
+<ul class="meni" id="meni">
+<li><a href="pocetna.html" data-prevod="nav_pocetna">Početna</a></li>
+<li><a href="o-nama.html" data-prevod="nav_o_nama">O nama</a></li>
+<li class="ima-mega"><a href="usluge.html" data-prevod="nav_usluge">Usluge</a>
+<div class="mega">
+<div><h3 data-prevod="mega_gume">Gume</h3><a href="usluge.html#prodaja" data-prevod="usl_prodaja">Prodaja guma</a><a href="usluge.html#skladistenje" data-prevod="usl_skladistenje">Sezonsko skladištenje</a><a href="usluge.html#azot" data-prevod="usl_azot">Punjenje azotom</a></div>
+<div><h3 data-prevod="mega_vulk">Vulkanizerske usluge</h3><a href="usluge.html#zamena" data-prevod="usl_zamena">Zamena guma</a><a href="usluge.html#balansiranje" data-prevod="usl_balansiranje">Balansiranje točkova</a><a href="usluge.html#krpljenje" data-prevod="usl_krpljenje">Krpljenje guma</a></div>
+<div><h3 data-prevod="mega_info">Informacije</h3><a href="dokumenti/cenovnik.pdf" target="_blank" data-prevod="nav_cenovnik">Cenovnik (PDF)</a><a href="kontakt.html" data-prevod="nav_zakazivanje">Zakazivanje termina</a><a href="kontakt.html" data-prevod="nav_radno">Radno vreme</a></div>
+</div></li>
+<li><a href="kontakt.html" class="aktivan" data-prevod="nav_kontakt">Kontakt</a></li>
+</ul>
+<div class="alati">
+<button id="btn-jezik">English</button>
+<button id="btn-tema">Tamna</button>
+<button id="btn-font-veci" aria-label="Veći font">A+</button>
+<button id="btn-font-manji" aria-label="Manji font">A-</button>
+</div>
+</nav>
+</header>
+<main>
+<section class="naslovna-traka"><h1 data-prevod="k_naslov">Kontaktirajte nas</h1><p data-prevod="k_podnaslov">Pozovite nas, posetite nas ili pošaljite poruku</p></section>
+<section class="sekcija"><div class="kontejner kontakt-mreza">
+<div>
+<h2 data-prevod="k_info">Informacije</h2>
+<div class="stavka"><h3 data-prevod="k_adresa">Adresa</h3><p data-prevod="k_adresa_v">Novosadska 45, 23000 Zrenjanin, Srbija</p></div>
+<div class="stavka"><h3 data-prevod="k_telefon">Telefon</h3><p><a href="tel:+38123555123">+381 23 555 123</a><br><a href="tel:+381645551234">+381 64 555 1234</a></p></div>
+<div class="stavka"><h3 data-prevod="k_email">Email</h3><p><a href="mailto:info@vulkanizertocak.rs">info@vulkanizertocak.rs</a></p></div>
+<div class="stavka"><h3 data-prevod="k_radno">Radno vreme</h3><p data-prevod="k_radno_v">Pon–Pet: 07:00–19:00 | Sub: 08:00–15:00 | Ned: zatvoreno</p></div>
+<div class="mapa"><iframe src="https://www.google.com/maps?q=Zrenjanin&amp;output=embed" title="Lokacija vulkanizera Točak na Google mapi" loading="lazy"></iframe></div>
+</div>
+<div>
+<h2 data-prevod="k_poruka">Pošaljite poruku</h2>
+<form class="forma" id="forma-kontakt" novalidate>
+<label for="ime" data-prevod="l_ime">Ime i prezime</label><input type="text" id="ime" name="ime" data-prevod-ph="ph_ime" placeholder="Npr. Petar Petrović" autocomplete="name"><span class="poruka-greska" id="ime-greska" data-prevod="g_ime">Unesite ime i prezime (najmanje 3 karaktera).</span>
+<label for="telefon" data-prevod="l_telefon">Telefon</label><input type="tel" id="telefon" name="telefon" data-prevod-ph="ph_telefon" placeholder="Npr. 064 123 4567" autocomplete="tel"><span class="poruka-greska" id="telefon-greska" data-prevod="g_telefon">Unesite ispravan broj telefona.</span>
+<label for="email" data-prevod="l_email">Email (nije obavezno)</label><input type="email" id="email" name="email" autocomplete="email"><span class="poruka-greska" id="email-greska" data-prevod="g_email">Unesite ispravnu email adresu.</span>
+<label for="usluga" data-prevod="l_usluga">Usluga</label><select id="usluga" name="usluga"><option value="" data-prevod="o_izaberi">Izaberite uslugu</option><option value="zamena" data-prevod="o_zamena">Zamena guma</option><option value="balansiranje" data-prevod="o_balans">Balansiranje točkova</option><option value="krpljenje" data-prevod="o_krp">Krpljenje guma</option><option value="kupovina" data-prevod="o_prodaja">Kupovina guma</option><option value="ostalo" data-prevod="o_ostalo">Ostalo</option></select><span class="poruka-greska" id="usluga-greska" data-prevod="g_usluga">Izaberite uslugu.</span>
+<label for="datum" data-prevod="l_datum">Željeni datum</label><input type="date" id="datum" name="datum"><span class="poruka-greska" id="datum-greska" data-prevod="g_datum">Izaberite datum koji nije u prošlosti.</span>
+<label for="poruka" data-prevod="l_poruka">Poruka</label><textarea id="poruka" name="poruka" data-prevod-ph="ph_poruka" placeholder="Dimenzija gume, tip vozila, željeno vreme..."></textarea><span class="poruka-greska" id="poruka-greska" data-prevod="g_poruka">Unesite poruku (najmanje 10 karaktera).</span>
+<div class="saglasnost"><input type="checkbox" id="saglasnost" name="saglasnost"><label for="saglasnost" data-prevod="l_saglasnost">Saglasan/na sam sa obradom ličnih podataka.</label></div><span class="poruka-greska" id="saglasnost-greska" data-prevod="g_saglasnost">Morate prihvatiti uslove.</span>
+<p style="margin-top:18px"><button type="submit" class="dugme" data-prevod="k_dugme">Pošaljite poruku</button></p>
+<div class="uspeh" id="uspeh" data-prevod="k_uspeh">Hvala! Vaša poruka je poslata. Javićemo vam se u najkraćem roku.</div>
+</form>
+</div>
+</div></section>
+</main>
+<footer>
+<div class="footer-mreza">
+<div><h3 data-prevod="naziv">Vulkanizer Točak</h3><p data-prevod="f_opis">Pouzdana vulkanizerska usluga u Zrenjaninu. Zamena, balansiranje, krpljenje i prodaja guma.</p></div>
+<div><h3 data-prevod="f_nav">Navigacija</h3><ul><li><a href="pocetna.html" data-prevod="nav_pocetna">Početna</a></li><li><a href="o-nama.html" data-prevod="nav_o_nama">O nama</a></li><li><a href="usluge.html" data-prevod="nav_usluge">Usluge</a></li><li><a href="kontakt.html" data-prevod="nav_kontakt">Kontakt</a></li></ul></div>
+<div><h3 data-prevod="f_kontakt">Kontakt</h3><p data-prevod="f_adresa">Adresa: Novosadska 45, Zrenjanin</p><p data-prevod="f_tel">Telefon: +381 23 555 123</p><p>Email: info@vulkanizertocak.rs</p></div>
+<div><h3 data-prevod="f_radno">Radno vreme</h3><p data-prevod="f_vreme">Pon–Pet 07:00–19:00, Sub 08:00–15:00</p></div>
+</div>
+<div class="footer-dno">&copy; 2026 Vulkanizer Točak. <span data-prevod="f_prava">Sva prava zadržana.</span></div>
+</footer>
+<script src="biblioteke/jquery.min.js"></script>
+<script src="js/prevod-rezerva.js"></script>
+<script src="js/skripta.js"></script>
+</body>
+</html>
