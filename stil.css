@@ -1,0 +1,116 @@
+@font-face{font-family:"Osnovni";src:url("../fontovi/font-400.woff") format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:"Osnovni";src:url("../fontovi/font-700.woff") format("woff");font-weight:700;font-display:swap}
+:root{--primarna:#e8590c;--tamna:#1b1d21;--pozadina:#fff;--tekst:#222;--svetla:#f3f4f6;--kartica:#fff;--ivica:#d4d6da}
+html[data-tema="tamna"]{--pozadina:#141518;--tekst:#e8e8e8;--svetla:#1b1d21;--kartica:#23262b;--ivica:#3a3d42}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Osnovni",Arial,sans-serif;background:var(--pozadina);color:var(--tekst);line-height:1.6}
+img,video{max-width:100%;display:block}
+a{color:var(--primarna);text-decoration:none}
+h1,h2,h3{line-height:1.25}
+.kontejner{max-width:1140px;margin:0 auto;padding:0 20px}
+.zaglavlje{background:var(--tamna);position:sticky;top:0;z-index:100;transition:box-shadow .3s}
+.zaglavlje.senka{box-shadow:0 4px 18px rgba(0,0,0,.45)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;max-width:1140px;margin:0 auto;padding:10px 20px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:1.25rem}
+.logo img{width:42px;height:42px}
+.meni{display:flex;list-style:none;gap:4px;align-items:center}
+.meni a{color:#fff;padding:8px 13px;display:block;border-radius:5px;transition:background .3s}
+.meni>li>a:hover,.meni a.aktivan{background:var(--primarna)}
+.ima-mega{position:static}
+.mega{display:none;position:absolute;left:0;right:0;margin:0 auto;max-width:1100px;background:var(--kartica);padding:22px;gap:26px;grid-template-columns:repeat(3,1fr);box-shadow:0 10px 26px rgba(0,0,0,.35);border-radius:0 0 8px 8px}
+.ima-mega:hover .mega,.ima-mega:focus-within .mega{display:grid}
+.mega h3{font-size:1rem;margin-bottom:8px;color:var(--primarna)}
+.mega a{color:var(--tekst);padding:4px 0}
+.mega a:hover{color:var(--primarna);background:none}
+.alati{display:flex;gap:6px}
+.alati button{background:transparent;color:#fff;border:1px solid #777;border-radius:5px;padding:6px 10px;cursor:pointer;font:inherit;font-size:.85rem;transition:background .3s}
+.alati button:hover{background:var(--primarna);border-color:var(--primarna)}
+.alati button:disabled{opacity:.4;cursor:default}
+.hamburger{display:none;background:none;border:0;cursor:pointer;padding:6px}
+.hamburger span{display:block;width:26px;height:3px;background:#fff;margin:5px 0;transition:transform .3s,opacity .3s}
+.hamburger.otvoren span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.hamburger.otvoren span:nth-child(2){opacity:0}
+.hamburger.otvoren span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+.slajder{position:relative;height:540px;overflow:hidden;background:#000}
+.slajder-slika{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s}
+.slajder-slika.aktivna{opacity:1}
+.slajder-senka{position:absolute;inset:0;background:rgba(0,0,0,.5)}
+.slajder-tekst{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;padding:20px}
+.slajder-tekst h1{font-size:3.2rem;text-shadow:0 0 10px var(--primarna),0 0 28px var(--primarna);animation:pojavi 1.2s ease both}
+.slajder-tekst p{font-size:1.3rem;margin:12px 0 24px;animation:pojavi 1.2s .3s ease both}
+@keyframes pojavi{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.slajder-strelica{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.55);color:#fff;border:0;font-size:2.2rem;width:48px;height:60px;cursor:pointer;transition:background .3s}
+.slajder-strelica:hover{background:var(--primarna)}
+.slajder-levo{left:0}.slajder-desno{right:0}
+.slajder-tacke{position:absolute;bottom:16px;left:0;right:0;display:flex;justify-content:center;gap:8px}
+.slajder-tacka{width:12px;height:12px;border-radius:50%;border:2px solid #fff;background:transparent;cursor:pointer}
+.slajder-tacka.aktivna{background:var(--primarna);border-color:var(--primarna)}
+.sekcija{padding:64px 0}
+.svetla{background:var(--svetla)}
+.naslov{text-align:center;margin-bottom:38px}
+.naslov h2{font-size:2rem}
+.naslov p{opacity:.75}
+.dve-kolone{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.dve-kolone p{margin-bottom:14px}
+.dugme{display:inline-block;background:var(--primarna);color:#fff;padding:12px 26px;border-radius:6px;font-weight:700;border:0;cursor:pointer;font:inherit;font-weight:700;transition:transform .3s,background .3s}
+.dugme:hover{transform:scale(1.06);background:#c94a06;color:#fff}
+.slika-okvir{position:relative;overflow:hidden;border-radius:10px}
+.slika-okvir img{width:100%;transition:transform .6s,filter .6s;filter:grayscale(70%)}
+.slika-okvir:hover img{transform:scale(1.08);filter:grayscale(0)}
+.oznaka{position:absolute;bottom:14px;left:14px;background:var(--primarna);color:#fff;padding:8px 16px;border-radius:6px;font-weight:700}
+.mreza{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.kartica{background:var(--kartica);border:1px solid var(--ivica);border-radius:10px;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.kartica:hover{transform:translateY(-6px);box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.kartica .slika-okvir{border-radius:0}
+.kartica-telo{padding:18px}
+.kartica-telo h3{margin-bottom:6px}
+.video{width:100%;max-width:860px;margin:0 auto;border-radius:10px;background:#000}
+.baner{background:var(--primarna);color:#fff;text-align:center;padding:52px 20px}
+.baner h2{margin-bottom:10px}
+.baner .dugme{background:#fff;color:var(--primarna);margin-top:16px}
+.naslovna-traka{background:var(--tamna);color:#fff;text-align:center;padding:60px 20px}
+.naslovna-traka h1{font-size:2.5rem;text-shadow:0 0 12px var(--primarna)}
+.statistike{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;text-align:center}
+.statistike .broj{font-size:2.6rem;font-weight:700;color:var(--primarna)}
+.kontakt-mreza{display:grid;grid-template-columns:1fr 1fr;gap:42px}
+.stavka{margin-bottom:16px}
+.stavka h3{font-size:1rem;color:var(--primarna)}
+.mapa iframe{width:100%;height:300px;border:0;border-radius:10px}
+.forma label{display:block;font-weight:700;margin:12px 0 4px}
+.forma input,.forma select,.forma textarea{width:100%;padding:10px;border:2px solid var(--ivica);border-radius:6px;background:var(--kartica);color:var(--tekst);font:inherit;transition:border-color .3s}
+.forma textarea{min-height:110px;resize:vertical}
+.forma input:focus,.forma select:focus,.forma textarea:focus{outline:none;border-color:var(--primarna)}
+.forma .greska{border-color:#d62828}
+.forma .ispravno{border-color:#2a9d3f}
+.forma .saglasnost{display:flex;gap:10px;align-items:center;margin-top:14px}
+.forma .saglasnost input{width:auto}
+.forma .saglasnost label{margin:0;font-weight:400}
+.poruka-greska{display:none;color:#d62828;font-size:.85rem}
+.poruka-greska.vidljiva{display:block}
+.uspeh{display:none;margin-top:14px;padding:12px;border-radius:6px;background:#2a9d3f;color:#fff}
+.uspeh.vidljiva{display:block}
+.animiraj{opacity:0}
+.dugme-gore{position:fixed;right:24px;bottom:24px;width:46px;height:46px;border-radius:50%;background:var(--primarna);color:#fff;border:0;font-size:1.3rem;cursor:pointer;z-index:120}
+footer{background:var(--tamna);color:#c9c9c9;padding:42px 0 16px}
+.footer-mreza{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px;max-width:1140px;margin:0 auto;padding:0 20px}
+footer h3{color:#fff;margin-bottom:8px;font-size:1.05rem}
+footer a{color:#c9c9c9}
+footer a:hover{color:var(--primarna)}
+footer ul{list-style:none}
+.footer-dno{text-align:center;margin-top:28px;font-size:.85rem;opacity:.7}
+@media (max-width:900px){
+.hamburger{display:block}
+.meni{display:none;flex-direction:column;align-items:stretch;width:100%;order:3}
+.meni.otvorena{display:flex}
+.mega{display:grid;position:static;grid-template-columns:1fr;box-shadow:none;padding:6px 14px;background:transparent}
+.mega h3{margin-top:8px}
+.mega a{color:#ddd}
+.alati{order:2}
+.slajder{height:400px}
+.slajder-tekst h1{font-size:2.1rem}
+.dve-kolone,.kontakt-mreza{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+.slajder-tekst p{font-size:1rem}
+.alati button{padding:5px 7px}
+}
